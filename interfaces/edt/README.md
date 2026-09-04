@@ -8,7 +8,9 @@ Run
 This will compile the hwacq_edttake executable.
 
 Usage:
+```
 ./hwacq_edttake --help
+```
 
 
 
