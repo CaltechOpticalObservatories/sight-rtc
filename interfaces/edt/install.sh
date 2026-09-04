@@ -1,10 +1,5 @@
 #!/bin/bash
 
-#if [ -z "$SCEXAO_HW" ]; then
-#    echo "SCEXAO_HW env variable undefined! Aborting."
-#    exit 1
-#fi
-
 if [ -z "$MILK_ROOT" ]; then
     echo "MILK_ROOT env variable undefined! Aborting."
     exit 1
@@ -15,8 +10,6 @@ if [ -z "$MILK_INSTALLDIR" ]; then
     echo "MILK_INSTALLDIR env variable undefined! Aborting."
     exit 1
 fi
-
-#cd ${SCEXAO_HW}/interfaces/edt/
 
 ## Framegrabbing executable
 EDT_ROOT="/opt/EDTpdv"
@@ -30,5 +23,3 @@ OTHFLAGS="-Wall -Wno-format-truncation -Wno-format-overflow -Wl,-rpath=${MILK_IN
 
 gcc -O2 -o ${TARGET} ${FILES} ${IFLAGS} ${LFLAGS} ${lFLAGS} ${OTHFLAGS}
 
-#mkdir -p ${SCEXAO_HW}/bin/
-#mv ${TARGET} ${SCEXAO_HW}/bin/
